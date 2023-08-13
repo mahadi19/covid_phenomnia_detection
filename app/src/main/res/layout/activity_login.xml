@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Login">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+       android:layout_margin="5dp"
+        android:background="@color/white_2"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/textView_login_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Welcome back"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/textView_login_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_login_head"
+            android:text="Please login to continue"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/image_welcome"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/textView_login_head"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_user_profilepic"
+
+            />
+
+        <TextView
+            android:id="@+id/textView_login_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/image_welcome"
+            android:padding="6dp"
+            android:textSize="15sp"
+            android:text="Email"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText_loginpage_email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/cardview_border"
+            android:layout_below="@id/textView_login_email"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+
+
+            android:hint="  Enter your email"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+
+            android:inputType="textEmailAddress"
+            android:padding="6dp"
+            android:textColorHint="@color/gray_ash"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textView_login_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_loginpage_email"
+            android:padding="6dp"
+            android:textSize="15sp"
+            android:text="Password"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editText_loginpage_password"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/textView_login_password"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/cardview_border"
+            android:hint="  Enter your password"
+            android:inputType="textPassword"
+            android:padding="6dp"
+            android:textColorHint="@color/gray_ash"
+            android:textSize="16sp" />
+        <ImageView
+            android:id="@+id/editText_loginpage_eye"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/textView_login_password"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="310dp"
+            android:padding="6dp"
+            />
+        <TextView
+            android:layout_marginTop="20dp"
+            android:id="@+id/forgot_password_textview_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_loginpage_eye"
+            android:text="Forgot password?"
+            android:textSize="15sp"
+            android:layout_marginLeft="235dp"
+            android:textColor="#00008B"/>
+
+        <CheckBox
+            android:id="@+id/remember_me_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_loginpage_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="15dp"
+            android:textStyle="bold"
+            android:checked="true"
+
+            android:text="Remember Me" />
+
+
+        <Button
+            android:id="@+id/loginpage_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_loginpage_password"
+            android:layout_marginTop="50dp"
+            android:gravity="center"
+            android:backgroundTint="@color/purple_500"
+            android:textSize="15sp"
+            android:text="Login" />
+
+        <TextView
+            android:id="@+id/textView_dont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/loginpage_button"
+            android:gravity="center"
+            android:padding="6dp"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:text="Don't have an account?"
+
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/textView_Register_login_page"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_dont"
+            android:gravity="center"
+            android:padding="6dp"
+
+            android:text="Register"
+            android:textSize="15sp"
+            android:textStyle="italic"
+            android:layout_marginBottom="350dp"
+
+            android:textColor="@color/purple_700"
+
+            />
+
+        <ProgressBar
+            android:id="@+id/Progressbar1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:elevation="10dp"
+            android:visibility="gone" />
+
+
+    </RelativeLayout>
+
+
+
+</ScrollView>

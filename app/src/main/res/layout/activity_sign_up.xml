@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Sign_up">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white_2"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginBottom="5dp"
+        >
+
+        <TextView
+            android:id="@+id/textView_register_head"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textColor="@color/black"
+            android:text="Sign-up"
+            android:textSize="20sp"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/textView_register_instruction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:textSize="20sp"
+            android:layout_below="@id/textView_register_head"
+            android:text="Complete the form below\n to sign up for our service "
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:id="@+id/textView_register_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_register_instruction"
+            android:padding="6dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Full Name" />
+
+        <EditText
+            android:id="@+id/editText_register_full_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_register_full_name"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/border"
+
+            android:hint="Enter your full name"
+            android:inputType="textPersonName"
+            android:padding="6dp"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/textView_register_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_register_full_name"
+            android:padding="6dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Email" />
+
+        <EditText
+            android:id="@+id/editText_register_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_register_email"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:hint="Enter your email"
+            android:background="@drawable/border"
+
+            android:inputType="textEmailAddress"
+            android:padding="6dp"
+            android:textSize="16sp"
+            />
+        <TextView
+            android:id="@+id/textView_register_date_of_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_register_email"
+            android:padding="6dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Date of Birth (d/m/y)" />
+
+
+
+        <EditText
+            android:id="@+id/editText_register_date_of_birth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_register_date_of_birth"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="2dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/border"
+            android:focusable="false"
+            android:hint="Select your date of birth"
+            android:inputType="textPersonName"
+            android:padding="6dp"
+            android:textSize="16sp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/editText_register_gender"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_register_date_of_birth"
+            android:padding="6dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Gender" />
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:textSize="15sp"
+            android:layout_below="@+id/editText_register_gender"
+            android:id="@+id/radio_group_register_id">
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_female"
+                android:textSize="15sp"
+                android:text="Female"
+                android:layout_below="@+id/radio_group_register_id"/>
+            <RadioButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/radio_male"
+                android:textSize="15sp"
+                android:text="Male"
+                android:layout_marginLeft="50dp"
+                android:layout_below="@+id/radio_group_register_id"/>
+        </RadioGroup>
+
+        <TextView
+            android:layout_marginTop="40dp"
+            android:id="@+id/Textview_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_register_gender"
+            android:padding="6dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Mobile" />
+
+        <LinearLayout
+            android:layout_below="@+id/Textview_mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/Linear_mobile"
+            android:background="@drawable/border"
+            >
+
+
+            <EditText
+                android:id="@+id/editText_register_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Textview_mobile"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:hint="Enter your mobile number"
+                android:inputType="textPersonName"
+                android:padding="6dp"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textView_register_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/Linear_mobile"
+            android:padding="6dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Password" />
+
+        <EditText
+            android:id="@+id/editText_register_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_register_password"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:hint="Enter your password"
+            android:background="@drawable/border"
+
+            android:inputType="textPassword"
+            android:padding="6dp"
+            android:textSize="16sp"
+            />
+
+
+
+        <TextView
+            android:id="@+id/textView_register_repassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_register_password"
+            android:padding="6dp"
+            android:textSize="15sp"
+            android:textColor="@color/black"
+            android:text="Confirm Password" />
+
+        <EditText
+            android:id="@+id/editText_register_repassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_register_repassword"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:background="@drawable/border"
+            android:hint="Confirm your password"
+
+            android:inputType="textPassword"
+            android:padding="6dp"
+            android:textSize="16sp"
+            />
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/Progressbar"
+            android:elevation="10dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:visibility="gone"
+            />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@id/editText_register_repassword"
+            >
+            <Button
+                android:id="@+id/Button_Register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Already have an account?"
+                android:textSize="14sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                />
+            <TextView
+                android:id="@+id/text_signin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign in"
+                android:textSize="15sp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/purple_700"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="50dp"
+                />
+
+
+
+        </LinearLayout>
+
+
+
+    </RelativeLayout>
+
+
+
+
+</ScrollView>

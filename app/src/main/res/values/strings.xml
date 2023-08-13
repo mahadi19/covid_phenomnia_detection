@@ -1,0 +1,163 @@
+<resources>
+    <string name="app_name">Detect using X-ray Images</string>
+    <string name="select_image">Select Image</string>
+
+
+    <!--    <string-array name="array_indian_states">-->
+    <!--        <item>Select Your states</item>-->
+    <!--        <item>Faculty of Engineering</item>-->
+    <!--        <item>Faculty of Science</item>-->
+    <!--        <item>Faculty of Arts and Humanities</item>-->
+    <!--        <item>Faculty of Biological Science </item>-->
+    <!--        <item>Faculty of  Law </item>-->
+    <!--    </string-array>-->
+
+    <!--    <string-array name="array_default_districts">-->
+    <!--        <item>Select Your Disctrict</item>-->
+    <!--    </string-array>-->
+
+    <!--    <string-array name="array_andhra_pradesh_districts">-->
+    <!--        <item>Select Your Districts</item>-->
+    <!--        <item>Department of Computer Science and Engineering</item>-->
+    <!--        <item>Department of Electrical and Electronic Engineering</item>-->
+    <!--    </string-array>-->
+
+    <!--    <string-array name="array_arunachal_pradesh_districts">-->
+    <!--        <item>Select Your Department</item>-->
+    <!--        <item>Department of Applied Chemistry and Chemical Engineering</item>-->
+    <!--        <item>Department of Chemistry </item>-->
+    <!--        <item>Department of Physics </item>-->
+    <!--        <item>Department of Mathematics</item>-->
+    <!--        <item>Department of Statistics</item>-->
+    <!--        <item>Department of Marine Science and Fisheris</item>-->
+    <!--        <item>Department of Forestry and Environmental Science </item>-->
+    <!--    </string-array>-->
+
+    <!--    <string-array name="array_assam_districts">-->
+    <!--        <item>Select Your District</item>-->
+    <!--        <item>Bajali</item>-->
+    <!--        <item>Baksa</item>-->
+    <!--        <item>Barpeta</item>-->
+    <!--        <item>Biswanath</item>-->
+    <!--        <item>Bongaigaon</item>-->
+    <!--        <item>Cachar</item>-->
+    <!--        <item>Charaideo</item>-->
+    <!--        <item>Chirang</item>-->
+    <!--        <item>Darrang</item>-->
+    <!--        <item>Dhemaji</item>-->
+    <!--        <item>Dhubri</item>-->
+    <!--    </string-array>-->
+
+    <!--    <string-array name="array_bihar_districts">-->
+    <!--        <item>Select Your District</item>-->
+    <!--        <item>Araria</item>-->
+    <!--        <item>Arwal</item>-->
+    <!--        <item>Aurangabad</item>-->
+    <!--        <item>Banka</item>-->
+    <!--        <item>Begusarai</item>-->
+    <!--        <item>Bhagalpur</item>-->
+    <!--        <item>Bhojpur</item>-->
+    <!--        <item>Buxar</item>-->
+    <!--        <item>Darbhanga</item>-->
+    <!--        <item>East Champaran</item>-->
+    <!--    </string-array>-->
+
+    <!--    <string-array name="array_chhattisgarh_districts">-->
+    <!--        <item>Select Your District</item>-->
+    <!--        <item>Balod</item>-->
+    <!--        <item>Baloda Bazar</item>-->
+    <!--        <item>Balrampur Ramanujganj</item>-->
+    <!--        <item>Bastar</item>-->
+    <!--        <item>Bemetara</item>-->
+    <!--        <item>Bijapur</item>-->
+    <!--        <item>Bilaspur</item>-->
+    <!--        <item>Dantewada</item>-->
+    <!--        <item>Dhamtari</item>-->
+    <!--        <item>Durg</item>-->
+    <!--    </string-array>-->
+
+    <string-array name="faculty_array">
+
+        <item>Select Faculty </item>
+        <item>Faculty of Science</item>
+        <item>Faculty of Arts</item>
+        <item>Faculty of Business Administration</item>
+        <item>Faculty of Social Sciences</item>
+        <item>Faculty of Biological Sciences</item>
+        <item>Faculty of Law</item>
+        <item>Faculty of Engineering and Technology</item>
+        <item>Faculty of Medicine</item>
+    </string-array>
+
+    <string-array name="departments_science">
+
+        <item>Select Department</item>
+        <item>Department of Physics</item>
+        <item>Department of Chemistry</item>
+        <item>Department of Mathematics</item>
+        <item>Department of Statistics</item>
+        <item>Department of Botany</item>
+        <item>Department of Zoology</item>
+        <item>Department of Geography and Environmental Studies</item>
+        <item>Department of Psychology</item>
+        <item>Department of Applied Chemistry and Chemical Engineering</item>
+        <item>Department of Oceanography</item>
+    </string-array>
+
+    <string-array name="departments_arts">
+        <item>Select Department</item>
+        <item>Department of Bangla</item>
+        <item>Department of English</item>
+        <item>Department of History</item>
+        <item>Department of Philosophy</item>
+        <item>Department of Islamic Studies</item>
+        <item>Department of Communication and Journalism</item>
+        <item>Department of Fine Arts</item>
+    </string-array>
+
+    <string-array name="departments_business_administration">
+        <item>Select Department</item>
+        <item>Department of Accounting and Information Systems</item>
+        <item>Department of Finance and Banking</item>
+        <item>Department of Management Studies</item>
+        <item>Department of Marketing</item>
+        <item>Department of Tourism and Hospitality Management</item>
+    </string-array>
+    <string-array name="departments_empty_array">
+        <item>Please select a faculty first</item>
+    </string-array>
+
+
+    <string-array name="departments_social_sciences">
+        <item>Select Department</item>
+        <item>Department of Economics</item>
+        <item>Department of Political Science</item>
+        <item>Department of Public Administration</item>
+        <item>Department of Sociology</item>
+        <item>Department of Anthropology</item>
+        <item>Department of Social Work</item>
+    </string-array>
+
+    <string-array name="departments_biological_sciences">
+        <item>Select Department</item>
+        <item>Department of Microbiology</item>
+        <item>Department of Biochemistry and Molecular Biology</item>
+    </string-array>
+
+    <string-array name="departments_law">
+        <item>Select Department</item>
+        <item>Department of Law</item>
+    </string-array>
+
+    <string-array name="departments_engineering_technology">
+        <item>Select Department</item>
+        <item>Department of Applied Physics and Electronic Engineering</item>
+        <item>Department of Computer Science and Engineering</item>
+        <item>Department of Electrical and Electronic Engineering</item>
+        <item>Department of Civil Engineering</item>
+        <item>Department of Petroleum and Mining Engineering</item>
+        <item>Department of Architecture</item>
+    </string-array>
+
+
+</resources>

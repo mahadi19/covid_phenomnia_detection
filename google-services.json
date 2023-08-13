@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "88908071001",
+    "firebase_url": "https://covid-19-pneomonia-detection-default-rtdb.firebaseio.com",
+    "project_id": "covid-19-pneomonia-detection",
+    "storage_bucket": "covid-19-pneomonia-detection.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:88908071001:android:91df5117ba3490be5df148",
+        "android_client_info": {
+          "package_name": "com.facultyofengineeringcu12.covid_19_pneomonia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "88908071001-aoor4ssspqqnhh7bpprsrmausnjm2crt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvLDDpk23TyWHkTcKhKwOjQHbmzLfd3og"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "88908071001-aoor4ssspqqnhh7bpprsrmausnjm2crt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

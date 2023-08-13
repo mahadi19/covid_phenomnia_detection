@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background1"
+    tools:context=".UserProfileActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:background="@drawable/cardview_border"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:backgroundTint="#5CC09F"
+            >
+
+            <ImageView
+                android:id="@+id/imageView_profile_photo"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/ic_user_profilepic" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_showwelcome"
+                android:layout_below="@id/imageView_profile_photo"
+                android:hint="Loading"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_centerInParent="true"
+
+                />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:id="@+id/Relative2"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cardview_border"
+
+            >
+            <ImageView
+                android:id="@+id/ic_profileid"
+                android:layout_marginLeft="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_user_profilepic"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_show_fullname"
+                android:hint="Loading"
+
+                android:textColor="@color/black"
+                android:layout_alignStart="@+id/ic_profileid"
+                android:layout_marginStart="80dp"
+                android:textSize="15sp"
+                android:layout_centerInParent="true"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="30dp"
+
+                android:layout_below="@+id/textView_show_fullname"
+               />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:background="@drawable/cardview_border"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+
+            >
+            <ImageView
+                android:id="@+id/ic_emailid"
+                android:layout_marginLeft="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_email"/>
+
+            <TextView
+                android:id="@+id/textView_show_email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@+id/ic_emailid"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="80dp"
+                android:hint="Loading"
+                android:textColor="@color/black"
+                android:textSize="15sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/textView_show_email"
+              />
+            <ProgressBar
+                android:id="@+id/ProgressbarID"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:elevation="10dp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cardview_border"
+
+            >
+            <ImageView
+                android:id="@+id/ic_birthdayid"
+                android:layout_marginLeft="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_date_time"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView_show_birthdate"
+                android:textColor="@color/black"
+                android:hint="Loading"
+                android:layout_alignStart="@+id/ic_birthdayid"
+                android:layout_marginStart="80dp"
+                android:textSize="15sp"
+                android:layout_centerInParent="true"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/textView_show_birthdate"
+               />
+
+
+        </RelativeLayout>
+        <RelativeLayout
+
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cardview_border"
+
+            >
+            <ImageView
+                android:id="@+id/ic_genderid"
+                android:layout_marginLeft="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_gender_"/>
+
+            <TextView
+                android:id="@+id/textView_show_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:layout_alignStart="@+id/ic_genderid"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="80dp"
+                android:hint="Loading"
+                android:textSize="15sp" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/textView_show_gender"
+                />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/cardview_border"
+
+            >
+            <ImageView
+                android:id="@+id/ic_mobileid"
+                android:layout_marginLeft="5dp"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_phone_no"/>
+            <TextView
+                android:id="@+id/textView_mobile_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+
+                android:hint="Loading"
+                android:layout_alignStart="@+id/ic_mobileid"
+                android:layout_marginStart="80dp"
+                android:textSize="15sp"
+                android:layout_centerInParent="true"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/textView_mobile_no"
+              />
+
+
+        </RelativeLayout>
+
+
+
+
+    </LinearLayout>
+
+
+</ScrollView>

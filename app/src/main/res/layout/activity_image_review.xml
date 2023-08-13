@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    android:background="@color/white_2"
+    tools:context=".ImageReview">
+
+
+
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+
+
+
+
+        <ImageView
+            android:background="@drawable/cardview_border_pink"
+            android:id="@+id/imageId"
+            android:src="@drawable/ic_baseline_photo_size_select_actual_24"
+            android:layout_gravity="center"
+            android:layout_width="366dp"
+            android:layout_height="280dp">
+
+        </ImageView>
+
+
+
+        <Button
+            android:id="@+id/selectId"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="@string/select_image"
+
+            android:backgroundTint="@color/yellow_orange"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content">
+
+        </Button>
+        <EditText
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/cardview_border_pink"
+            android:id="@+id/title"
+
+            android:hint="Say whats on your mind!"
+            android:layout_width="match_parent"
+            android:layout_height="80dp">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/uploadId"
+            android:layout_marginTop="15dp"
+            android:text="Upload"
+
+            android:backgroundTint="@color/yellow_orange"
+            android:layout_gravity="center"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content">
+
+        </Button>
+
+
+
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
