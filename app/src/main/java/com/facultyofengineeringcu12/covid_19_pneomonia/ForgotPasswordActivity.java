@@ -35,6 +35,8 @@ public class ForgotPasswordActivity extends AppCompatActivity {
         registeredEmail2 = findViewById(R.id.registeredEmail);
         progressBar = findViewById(R.id.Progressbar2);
 
+        getSupportActionBar().setTitle("Recover your password");
+
         button_reset2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

@@ -37,6 +37,7 @@ public class Homepage2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_homepage2);
+        getSupportActionBar().setTitle("Dashboard");
 
         cvProfile = findViewById(R.id.cardView1);
         cvHome = findViewById(R.id.cardView2);

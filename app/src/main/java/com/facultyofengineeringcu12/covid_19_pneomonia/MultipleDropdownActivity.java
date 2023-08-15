@@ -24,6 +24,7 @@ public class MultipleDropdownActivity extends AppCompatActivity {
         facultySpinner = findViewById(R.id.spinner_Faculty);
         departmentSpinner = findViewById(R.id.spinner_Department);
         submitButton = findViewById(R.id.button_submit);
+        getSupportActionBar().setTitle("What's yours!");
 
         // Set up faculty spinner
         ArrayAdapter<CharSequence> facultyAdapter = ArrayAdapter.createFromResource(

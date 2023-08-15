@@ -57,6 +57,8 @@ public class Sign_up extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        getSupportActionBar().setTitle("Signup here");
+
         txtSignIn = findViewById(R.id.text_signin);
 
         fullname = findViewById(R.id.editText_register_full_name);

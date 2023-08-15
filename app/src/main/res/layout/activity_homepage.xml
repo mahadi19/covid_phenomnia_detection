@@ -75,7 +75,7 @@
                                         android:id="@+id/h1"
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:text="Recent posts"
+                                        android:text="Recently posted"
                                         android:textSize="20sp"
                                         android:textColor="@color/black"
                                         android:textStyle="bold"
@@ -406,7 +406,7 @@
 
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
-                                        android:text="Update User Profile"
+                                        android:text="Update Username"
                                         android:textSize="20sp"
                                         android:textColor="@color/black"
                                         android:textStyle="bold"

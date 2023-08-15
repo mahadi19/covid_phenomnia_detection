@@ -153,61 +153,6 @@ public class ImageReview extends AppCompatActivity {
         return mimeTypeMap.getExtensionFromMimeType(contentResolver.getType(imageUri));
     }
 
-//    private void saveData(String username){
-//        String imageName = imgname.getText().toString().trim();
-//
-//        final ProgressDialog dialog=new ProgressDialog(this);
-//        dialog.setTitle("File Uploader");
-//        dialog.show();
-//
-//        if(imageName.isEmpty()){
-//            imgname.setError("Enter a Title");
-//
-//        }
-//
-//        else {
-//            StorageReference ref = storageReference.child(System.currentTimeMillis() + "." + getFileExtension(imageUri));
-//
-//            ref.putFile(imageUri)
-//                    .addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-//                        @Override
-//                        public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-//                            Toast.makeText(ImageReview.this, "Uploaded", Toast.LENGTH_SHORT).show();
-//
-//                            Task<Uri> uriTask = taskSnapshot.getStorage().getDownloadUrl();
-//                            while (!uriTask.isSuccessful()) ;
-//                            Uri downloadUri = uriTask.getResult();
-//
-//                            Upload upload = new Upload(imageName, downloadUri.toString(), username);
-//                            String uploadId = databaseReference.push().getKey();
-//                            databaseReference.child(uploadId).setValue(upload);
-//                            nextActivity();
-//                        }
-//                    })
-//                    .addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {
-//                        @Override
-//                        public void onProgress(UploadTask.TaskSnapshot taskSnapshot)
-//                        {
-//                            float percent=(100*taskSnapshot.getBytesTransferred())/taskSnapshot.getTotalByteCount();
-//                            dialog.setMessage("Uploaded :"+(int)percent+" %");
-//                        }
-//                    })
-//
-//                    .addOnFailureListener(new OnFailureListener() {
-//                        @Override
-//                        public void onFailure(@NonNull Exception e) {
-//                            Toast.makeText(ImageReview.this, "Unsuccessful", Toast.LENGTH_SHORT).show();
-//                        }
-//                    });
-//
-//        }
-//    }
-//
-//    private void nextActivity(){
-//        imgname.setText("");
-//        Intent intent = new Intent(ImageReview.this,ShowImageReview.class);
-//        startActivity(intent);
-//    }
 
     private void saveData(String username) {
         String imageName = imgname.getText().toString().trim();
@@ -266,12 +211,6 @@ public class ImageReview extends AppCompatActivity {
         }
     }
 
-//    private void nextActivity() {
-//        imgname.setText("");
-//        Intent intent = new Intent(ImageReview.this, ShowImageReview.class);
-//        startActivity(intent);
-//        finish();
-//    }
 
 
 }

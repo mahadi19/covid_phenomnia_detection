@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:padding="6dp"
         android:textSize="18sp"
-        android:text="Lets check your IQ..."
+        android:text="Lets check..."
         android:textColor="#555555" />
 
     <TextView

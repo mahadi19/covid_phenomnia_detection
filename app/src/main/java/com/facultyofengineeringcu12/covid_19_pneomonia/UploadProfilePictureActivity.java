@@ -18,7 +18,7 @@ public class UploadProfilePictureActivity extends AppCompatActivity {
     private FirebaseAuth authProfile;
     StorageReference storageReference;
     private FirebaseUser firebaseUser;
-    //   Uri filepath;
+
     Bitmap bitmap;
     Button buttonUploadpicChoose,buttonUpload;
     private static final int PICK_IMAGE_REQUEST =1;

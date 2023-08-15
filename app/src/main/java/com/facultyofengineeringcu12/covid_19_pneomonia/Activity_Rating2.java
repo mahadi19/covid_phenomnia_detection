@@ -37,6 +37,7 @@ public class Activity_Rating2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_rating2);
+        getSupportActionBar().setTitle("Rate our app");
 
         // Initialize Firebase database reference
         ratingsRef = FirebaseDatabase.getInstance().getReference("ratings");

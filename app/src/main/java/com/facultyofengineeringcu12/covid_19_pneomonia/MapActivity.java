@@ -35,6 +35,8 @@ public class MapActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
 
+        getSupportActionBar().setTitle(" Your Present location");
+
 
         smf = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.gmap);
         client = LocationServices.getFusedLocationProviderClient(this);

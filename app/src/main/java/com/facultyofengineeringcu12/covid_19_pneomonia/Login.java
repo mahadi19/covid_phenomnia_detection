@@ -58,6 +58,8 @@ public class Login extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        getSupportActionBar().setTitle("Login here...");
+
         editTextemail = findViewById(R.id.editText_loginpage_email);
         editTextPassword = findViewById(R.id.editText_loginpage_password);
         button_login_page_login = findViewById(R.id.loginpage_button);

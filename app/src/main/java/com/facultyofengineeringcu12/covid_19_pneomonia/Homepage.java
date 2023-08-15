@@ -33,6 +33,8 @@ public class Homepage extends AppCompatActivity {
 
 
 
+
+
         cv1= findViewById(R.id.Timeline);
         cv3= findViewById(R.id.Detect);
         cv4 = findViewById(R.id.General_Awareness);

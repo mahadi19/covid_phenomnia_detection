@@ -51,6 +51,7 @@ public class CommentPanel extends AppCompatActivity {
 
         ActionBar actionBar;
         actionBar = getSupportActionBar();
+        getSupportActionBar().setTitle("Comment here");
 
         ColorDrawable colorDrawable = new ColorDrawable(Color.parseColor("#236488"));
         actionBar.setBackgroundDrawable(colorDrawable);
@@ -109,8 +110,7 @@ public class CommentPanel extends AppCompatActivity {
         }
         else  {
             Calendar dateValue = Calendar.getInstance();
-            /*SimpleDateFormat dateFormat = new SimpleDateFormat("dd-mm-yy");
-            String cdate = dateFormat.format(dateValue.getTime());*/
+
 
             String cdate = new SimpleDateFormat("dd-MM-yy", Locale.getDefault()).format(new Date());
 

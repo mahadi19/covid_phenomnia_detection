@@ -72,7 +72,7 @@
                                 <ImageView
                                     android:layout_width="match_parent"
                                     android:layout_height="100dp"
-                                    android:src="@drawable/ic_home" /> <!-- Replace with your image resource -->
+                                    android:src="@drawable/ic_baseline_home_24" /> <!-- Replace with your image resource -->
 
                                 <TextView
                                     android:layout_width="match_parent"

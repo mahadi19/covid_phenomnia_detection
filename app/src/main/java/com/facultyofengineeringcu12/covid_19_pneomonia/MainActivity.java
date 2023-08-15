@@ -8,6 +8,7 @@ import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.icu.text.SimpleDateFormat;
 import android.media.ThumbnailUtils;
 import android.net.Uri;
 import android.os.Build;
@@ -31,6 +32,8 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.ByteBuffer;
 import java.nio.ByteOrder;
+import java.util.Date;
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -39,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
     Button picture ,select;
     int imageSize = 224;
 
-    private Button shareButton;
+    private Button shareButton ,saveImageButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +60,8 @@ public class MainActivity extends AppCompatActivity {
 
 
         shareButton = findViewById(R.id.Share);
+
+        saveImageButton = findViewById(R.id.Savebtn);
 
         select.setOnClickListener(view -> {
 
@@ -87,6 +92,24 @@ public class MainActivity extends AppCompatActivity {
         });
 
 
+
+        saveImageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                // Capture the screenshot of the current view
+                Bitmap screenshot = takeScreenshot();
+
+                // Save the screenshot to the device's external storage
+                String imagePath = saveScreenshotToGallery(screenshot);
+                if (imagePath != null) {
+                    Toast.makeText(MainActivity.this, "Screenshot saved to gallery", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(MainActivity.this, "Failed to save screenshot", Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -107,18 +130,21 @@ public class MainActivity extends AppCompatActivity {
 
     public void classifyImage(Bitmap image){
         try {
+            // Create a new instance of the Model.
             Model model = Model.newInstance(getApplicationContext());
 
-            // Creates inputs for reference.
+            // Create a TensorBuffer for input.
             TensorBuffer inputFeature0 = TensorBuffer.createFixedSize(new int[]{1, 224, 224, 3}, DataType.FLOAT32);
+
+            // Allocate a ByteBuffer for the image data.
             ByteBuffer byteBuffer = ByteBuffer.allocateDirect(4 * imageSize * imageSize * 3);
             byteBuffer.order(ByteOrder.nativeOrder());
 
-            // get 1D array of 224 * 224 pixels in image
+            // Get pixel values from the image.
             int [] intValues = new int[imageSize * imageSize];
             image.getPixels(intValues, 0, image.getWidth(), 0, 0, image.getWidth(), image.getHeight());
 
-            // iterate over pixels and extract R, G, and B values. Add to bytebuffer.
+            // Iterate over pixels and add RGB values to the ByteBuffer.
             int pixel = 0;
             for(int i = 0; i < imageSize; i++){
                 for(int j = 0; j < imageSize; j++){
@@ -129,14 +155,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
 
+            // Load the ByteBuffer data into the input TensorBuffer.
             inputFeature0.loadBuffer(byteBuffer);
 
-            // Runs model inference and gets result.
+            // Run model inference and get outputs.
             Model.Outputs outputs = model.process(inputFeature0);
             TensorBuffer outputFeature0 = outputs.getOutputFeature0AsTensorBuffer();
 
+            // Get class confidences from the output tensor.
             float[] confidences = outputFeature0.getFloatArray();
-            // find the index of the class with the biggest confidence.
+
+            // Find the index of the class with the highest confidence.
             int maxPos = 0;
             float maxConfidence = 0;
             for(int i = 0; i < confidences.length; i++){
@@ -145,52 +174,65 @@ public class MainActivity extends AppCompatActivity {
                     maxPos = i;
                 }
             }
+
+            // Define class labels.
             String[] classes = {"Normal", "Covid'19", "Pneomonia"};
+
+            // Set the predicted class label.
             result.setText(classes[maxPos]);
 
+            // Generate a string displaying class confidences.
             String s = "";
             for(int i = 0; i < classes.length; i++){
                 s += String.format("%s: %.1f%%\n", classes[i], confidences[i] * 100);
             }
+
+            // Set the confidence text.
             confidence.setText(s);
 
-
-            // Releases model resources if no longer used.
+            // Release model resources.
             model.close();
         } catch (IOException e) {
-            // TODO Handle the exception
+            // Handle the exception
         }
     }
-
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == 1 && resultCode == RESULT_OK) {
+            // Get the captured image as a Bitmap.
             Bitmap image = (Bitmap) data.getExtras().get("data");
+
+            // Resize the image to a square.
             int dimension = Math.min(image.getWidth(), image.getHeight());
             image = ThumbnailUtils.extractThumbnail(image, dimension, dimension);
             imageView.setImageBitmap(image);
 
+            // Resize the image to the required input size and classify.
             image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false);
             classifyImage(image);
         }
         else{
+            // Get the selected image's URI.
             Uri dat = data.getData();
             Bitmap image = null;
             try {
+                // Retrieve the image from the URI.
                 image = MediaStore.Images.Media.getBitmap(this.getContentResolver(), dat);
             } catch (IOException e) {
                 e.printStackTrace();
             }
             imageView.setImageBitmap(image);
 
+            // Resize the image to the required input size and classify.
             image = Bitmap.createScaledBitmap(image, imageSize, imageSize, false);
             classifyImage(image);
         }
 
+        // Call the parent method for handling the result.
         super.onActivityResult(requestCode, resultCode, data);
-
     }
+
 
     private Bitmap takeScreenshot() {
         View rootView = getWindow().getDecorView().getRootView();
@@ -217,12 +259,6 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    private void printImage(String imagePath) {
-        // Implement your printing logic here
-        // You can use the imagePath to access the saved screenshot image
-        Log.d("Print", "Printing image: " + imagePath);
-        Toast.makeText(this, "Printing image", Toast.LENGTH_SHORT).show();
-    }
 
     private void shareImage(String imagePath) {
         File imageFile = new File(imagePath);
@@ -234,6 +270,41 @@ public class MainActivity extends AppCompatActivity {
         shareIntent.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION); // Add this line to grant read permission
         startActivity(Intent.createChooser(shareIntent, "Share Image"));
     }
+
+    private String saveScreenshotToGallery(Bitmap screenshot) {
+        try {
+            // Get the directory for storing images in the gallery
+            File directory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+
+            // Create a unique filename using timestamp
+            String timestamp = null;
+            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.N) {
+                timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.getDefault()).format(new Date());
+            }
+            String filename = "detection_screenshot_" + timestamp + ".png";
+
+            File screenshotFile = new File(directory, filename);
+
+            // Save the screenshot to the file
+            FileOutputStream outputStream = new FileOutputStream(screenshotFile);
+            screenshot.compress(Bitmap.CompressFormat.PNG, 100, outputStream);
+            outputStream.flush();
+            outputStream.close();
+
+            // Update the gallery so that the screenshot appears in the device's gallery app
+            Intent mediaScanIntent = new Intent(Intent.ACTION_MEDIA_SCANNER_SCAN_FILE);
+            Uri contentUri = Uri.fromFile(screenshotFile);
+            mediaScanIntent.setData(contentUri);
+            sendBroadcast(mediaScanIntent);
+
+            return screenshotFile.getAbsolutePath();
+        } catch (IOException e) {
+            e.printStackTrace();
+            return null;
+        }
+    }
+
+
 
 
 }
