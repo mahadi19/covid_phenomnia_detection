@@ -247,7 +247,7 @@ public class Login extends AppCompatActivity {
         super.onStart();
         if (authProfile.getCurrentUser() != null) {
             Toast.makeText(this, "You are already logged in", Toast.LENGTH_SHORT).show();
-            startActivity(new Intent(Login.this, Homepage.class));
+            startActivity(new Intent(Login.this, Homepage2.class));
             finish();
         } else {
             Toast.makeText(this, "Log in here", Toast.LENGTH_SHORT).show();

@@ -22,7 +22,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
             android:textColor="@color/black"
-            android:text="Sign-up"
+            android:text="Sign-up form"
             android:textSize="20sp"
             android:textAlignment="center"
             />
@@ -36,7 +36,7 @@
             android:layout_marginRight="30dp"
             android:textSize="20sp"
             android:layout_below="@id/textView_register_head"
-            android:text="Complete the form below\n to sign up for our service "
+            android:text="Fill  the form to sign up"
             android:textAlignment="center"
             />
 
@@ -271,6 +271,7 @@
             android:layout_centerVertical="true"
             android:visibility="gone"
             />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

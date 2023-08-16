@@ -188,8 +188,8 @@ public class Homepage2 extends AppCompatActivity {
         cvShareapp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(Homepage2.this, "In progress", Toast.LENGTH_SHORT).show();
-
+                Intent intent = new Intent(Homepage2.this,SASS.class);
+                startActivity(intent);
                 /*
                 // Get the path to the APK file
                 String apkFilePath = getApplicationInfo().sourceDir;

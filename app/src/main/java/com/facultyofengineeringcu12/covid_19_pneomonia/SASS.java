@@ -17,18 +17,5 @@ public class SASS extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sass);
 
-
-        // Initialize views
-        textView = findViewById(R.id.textView);
-        button = findViewById(R.id.button);
-
-        // Set click listener for the button
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Handle button click
-                textView.setText("Button Clicked!");
-            }
-        });
     }
 }
