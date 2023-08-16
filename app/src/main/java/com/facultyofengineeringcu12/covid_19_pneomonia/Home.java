@@ -11,6 +11,7 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -33,6 +34,9 @@ public class Home extends AppCompatActivity {
         lottieAnimationView = findViewById(R.id.lottiehome);
         nextButton = findViewById(R.id.MainACtivityofApp);
         getSupportActionBar().setTitle("Welcome");
+
+
+
 
 
         ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);

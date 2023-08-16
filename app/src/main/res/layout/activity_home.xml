@@ -8,10 +8,13 @@
     android:background="@drawable/gradiant_color2"
     android:orientation="vertical">
 
+
+
+
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/lottiehome"
         android:layout_gravity="center"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="120dp"
         android:layout_width="match_parent"
         android:layout_height="400dp"
         app:lottie_autoPlay="true"
@@ -29,6 +32,8 @@
         android:backgroundTint="@color/navy_blue"
         android:text="Welcome!\nLet's start exploring..."
         android:visibility="gone" />
+
+
 
 
 

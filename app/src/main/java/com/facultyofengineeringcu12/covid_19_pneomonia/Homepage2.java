@@ -12,6 +12,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.os.FileUtils;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -70,6 +71,9 @@ public class Homepage2 extends AppCompatActivity {
         ViewPager2 viewPager = findViewById(R.id.viewPager);
         ImagePagerAdapter adapter = new ImagePagerAdapter(images);
         viewPager.setAdapter(adapter);
+        WebView webView=(WebView) findViewById(R.id.GsapId);
+        webView.getSettings().setJavaScriptEnabled(true);
+        webView.loadUrl("file:///android_asset/index.html");
 
 
         cvProfile.setOnClickListener(new View.OnClickListener() {
