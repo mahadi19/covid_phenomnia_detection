@@ -33,6 +33,7 @@ public class Rating_again extends AppCompatActivity {
         ratingBar = findViewById(R.id.ratingBar);
         ratingText = findViewById(R.id.ratingText);
         ratingCount = findViewById(R.id.ratingCount);
+        getSupportActionBar().setTitle("Rate our app...");
 
         // Set RatingBar change listener
         ratingBar.setOnRatingBarChangeListener((ratingBar, rating, fromUser) -> {

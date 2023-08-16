@@ -171,7 +171,7 @@ public class Homepage2 extends AppCompatActivity {
         cvRate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Homepage2.this,Rate_our_app.class);
+                Intent intent = new Intent(Homepage2.this,Rating_again.class);
                 startActivity(intent);
 
             }
